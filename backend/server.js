@@ -7,14 +7,11 @@ const noteRoutes = require('./routes/notes');
 
 const app = express();
 
-// Connect to MongoDB
 connectDB();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', noteRoutes);
 
